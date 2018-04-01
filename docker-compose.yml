@@ -1,0 +1,16 @@
+version: '2'
+services:
+  app:
+    build: ./App/
+    # environment:
+    #   RAILS_ENV: development
+    # ports:
+    #   - '3000:3000'
+  nginx:
+    build: ./Nginx/
+  mysql:
+    build: ./Mysql/
+  redis:
+    build: ./Redis/
+  elastic-search:
+    build: ./ElasticSearch/
