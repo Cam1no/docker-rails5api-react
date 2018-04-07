@@ -1,2 +1,6 @@
 <%= javascript_pack_tag 'application' %>
 <%= image_tag('/sample.jpg') %>
+<%- @users.each do |user| %>
+  <%= user.name %>
+  <hr>
+<%- end %>
