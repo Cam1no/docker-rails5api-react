@@ -15,6 +15,10 @@ RUN curl -sL https://deb.nodesource.com/setup_7.x | bash - && \
 
 RUN mkdir /myapp
 WORKDIR /myapp
+
+# make directory for sockert
+RUN mkdir -p tmp/sockets
+
 COPY Gemfile /myapp/Gemfile
 COPY Gemfile.lock /myapp/Gemfile.lock
 RUN bundle install --jobs=4
